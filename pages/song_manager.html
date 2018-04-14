@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/other/fontawesome/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/other/simplebar/simplebar.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/styles/main.css" />
+</head>
+<body class="gradient-gray">
+
+    <div class="navbar-container">
+        <div class="navbar-grid">
+            <a href="song_manager.html">
+                <div class="navbar-link">
+                    <i class="fa fa-bars navbar-link-icon"></i>
+                    <div class="navbar-tooltip">
+                        <span class="navbar-tooltip-text">song manager</span>
+                    </div>
+                </div>
+            </a>
+            <div class="navbar-link">
+                <i class="fa fa-play-circle navbar-link-icon"></i>
+                <div class="navbar-tooltip">
+                    <span class="navbar-tooltip-text">playlists</span>
+                </div>
+            </div>
+            <div class="navbar-link">
+                <i class="fa fa-chart-bar navbar-link-icon"></i>
+                <div class="navbar-tooltip">
+                    <span class="navbar-tooltip-text">eq</span>
+                </div>
+            </div>
+            <div class="navbar-link">
+                <i class="fa fa-wrench navbar-link-icon"></i>
+                <div class="navbar-tooltip">
+                    <span class="navbar-tooltip-text">settings</span>
+                </div>
+            </div>
+            <div class="navbar-link">
+                <i class="fa fa-question navbar-link-icon"></i>
+                <div class="navbar-tooltip">
+                    <span class="navbar-tooltip-text">about</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="panel song-manager-grid">
+            <div class="top-grid">
+                <div class="card-button card-button-high"><i class="fa fa-plus"></i></div>
+                <div class="card-panel">
+                    <audio controls id="song_player" autoplay></audio>
+                </div>
+            </div>
+            <div class="card" data-simplebar>
+                <ul id="song-list" class="song-list">
+                </ul>
+            </div>
+        </div>
+        <div class="panel">
+            <input id="song_upload" type="file" multiple>
+        </div>
+    </div>
+    
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="../assets/other/jquery-3.3.1.min.js"></script>
+    <script src="../assets/other/jsmediatags.min.js"></script>
+    <script src="../assets/other/simplebar/simplebar.js"></script>
+    <script src="../assets/scripts/song_manager.js"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <script>if (window.module) module = window.module;</script>
+</body>
+</html>

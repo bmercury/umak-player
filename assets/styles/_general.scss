@@ -1,0 +1,63 @@
+.gradient-gray{
+    background: #5b5b5b;
+    background: -moz-linear-gradient(top, #5b5b5b 0%, #2c2c2c 100%);
+    background: -webkit-linear-gradient(top, #5b5b5b 0%,#2c2c2c 100%);
+    background: linear-gradient(to bottom, #5b5b5b 0%,#2c2c2c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5b5b', endColorstr='#353535',GradientType=0 );
+}
+
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+
+.song-manager-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px auto;
+    grid-row-gap: 20px;
+    max-height: 100vh;
+
+    .top-grid{
+        display: grid;
+        grid-template-columns: 40px auto;
+        grid-column-gap: 20px;
+    }
+}
+
+.panel{
+    // border: 1px solid red;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.card{
+    background-color: $gray-tr;
+    border-radius: 3px;
+}
+.card-panel{
+    background-color: $gray-tr;
+    border-radius: 3px;
+}
+.card-panel-round{
+    border-radius: 50px;
+}
+
+.card-button{
+    background-color: $gray-tr;
+    border-radius: 3px;
+    text-align: center;
+    color: $white;
+    line-height: 40px;
+}
+.card-button-round{
+    border-radius: 50%;
+}
+.card-button-high{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}

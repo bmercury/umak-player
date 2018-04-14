@@ -1,0 +1,62 @@
+.navbar-container{
+    // border: 1px dashed white;
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden auto;
+    box-sizing: border-box;
+    background-color: $gray-tr;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.navbar-link{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    transition-duration: 0.5s;
+
+    &:hover{
+        .navbar-tooltip{
+            opacity: 1;
+        }
+        background-color: $gray-tr-hover;
+    }
+}
+
+.navbar-link-icon{
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    color: $white;
+}
+.navbar-tooltip{
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    height: 60px;
+    line-height: 60px;
+    min-width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: left;
+    transition-duration: 0.5s;
+    z-index: 100;
+}
+
+.navbar-tooltip-text{
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 3px;
+    color: $white;
+    background: $gray;
+    padding: 10px 16px;
+    border: 1px solid salmon;
+}

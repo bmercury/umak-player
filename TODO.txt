@@ -1,1 +1,6 @@
-Test
+
+
+
+FUTURE STUFF:
+* Add more language support - Cyrilic etc.
+* Add navbar tooltip animations
