@@ -14,7 +14,7 @@ function createWindow(){
         'min-height':500,
         resizable: true,
         // center: true,
-        // icon: 'assets/images/icon.png',
+        icon: 'assets/images/icon.png',
         title: 'Umak music player', 
         backgroundColor: '#333333',
         minimizable: true,

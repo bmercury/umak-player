@@ -21,6 +21,7 @@
         display: grid;
         grid-template-columns: 4fr 1fr;
         grid-column-gap: 10px;
+        cursor: pointer;
 
         span{
             overflow: hidden;
@@ -29,5 +30,13 @@
     
     li:nth-of-type(2n){
         background-color: $gray-tr-hover;
+    }
+
+    li:hover{
+        background: rgba(250, 128, 114, 0.05);
+    }
+
+    .song_selected{
+        background-color: rgba(146, 94, 65, 0.274) !important;
     }
 }

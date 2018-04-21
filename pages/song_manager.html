@@ -50,9 +50,16 @@
     <div class="main-container">
         <div class="panel song-manager-grid">
             <div class="top-grid">
-                <div class="card-button card-button-high"><i class="fa fa-plus"></i></div>
-                <div class="card-panel">
-                    <audio controls id="song_player" autoplay></audio>
+                <label for="song_upload" class="card-button card-button-high"><i class="fa fa-plus"></i></label>
+                <div id="song_player" class="card-panel">
+                    <i id="button_random" onclick="song_player.toggleRandom()" class="fa fa-random button-playback"></i>
+                    <i id="button_previous" onclick="song_player.previousSong()" class="fa fa-step-backward button-playback"></i>
+                    <i id="button_play" onclick="song_player.playSong()" class="fa fa-play button-playback"></i>
+                    <i id="button_pause" onclick="song_player.pauseSong()" class="fa fa-pause button-playback"></i>
+                    <i id="button_stop" onclick="song_player.stopSong()" class="fa fa-stop button-playback"></i>
+                    <i id="button_next" onclick="song_player.nextSong()" class="fa fa-step-forward button-playback"></i>
+                    <i id="button_loop" onclick="song_player.toggleLoop()" class="fa fa-undo-alt button-playback button-playback-active"></i>
+                    <!-- <i class="fa fa-volume-up"></i> -->
                 </div>
             </div>
             <div class="card" data-simplebar>
@@ -61,7 +68,7 @@
             </div>
         </div>
         <div class="panel">
-            <input id="song_upload" type="file" multiple>
+            <input style="display: none;" id="song_upload" type="file" multiple>
         </div>
     </div>
     
@@ -70,6 +77,7 @@
     <script src="../assets/other/jsmediatags.min.js"></script>
     <script src="../assets/other/simplebar/simplebar.js"></script>
     <script src="../assets/scripts/song_manager.js"></script>
+    <script src="../assets/scripts/song_player.js"></script>
     <script src="../assets/scripts/main.js"></script>
     <script>if (window.module) module = window.module;</script>
 </body>

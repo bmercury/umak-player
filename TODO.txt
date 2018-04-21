@@ -1,6 +1,8 @@
-
+TODO:
+* Add adding youtube videos possible
+* Add time slider for songs
+* Can remove songs
 
 
 FUTURE STUFF:
 * Add more language support - Cyrilic etc.
-* Add navbar tooltip animations

@@ -44,7 +44,10 @@ body {
 
 .card-panel {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
 .card-panel-round {
   border-radius: 50px; }
@@ -54,13 +57,32 @@ body {
   border-radius: 3px;
   text-align: center;
   color: #e2e2e2;
-  line-height: 40px; }
+  line-height: 40px;
+  cursor: pointer;
+  transition-duration: 0.25s; }
+  .card-button:hover {
+    transform: scale(1.1); }
 
 .card-button-round {
   border-radius: 50%; }
 
 .card-button-high {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); }
+
+.button-playback {
+  color: #e2e2e2;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0px 5px; }
+
+.button-playback-active {
+  color: #db8d60; }
+
+#song_player i {
+  cursor: pointer;
+  transition-duration: 0.1s; }
+  #song_player i:active {
+    transform: scale(0.8); }
 
 .navbar-container {
   min-width: 60px;
@@ -136,10 +158,15 @@ body {
     color: #c0c0c0;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-column-gap: 10px; }
+    grid-column-gap: 10px;
+    cursor: pointer; }
     .song-list li span {
       overflow: hidden; }
   .song-list li:nth-of-type(2n) {
     background-color: rgba(0, 0, 0, 0.1); }
+  .song-list li:hover {
+    background: rgba(250, 128, 114, 0.05); }
+  .song-list .song_selected {
+    background-color: rgba(146, 94, 65, 0.274) !important; }
 
 /*# sourceMappingURL=main.css.map */

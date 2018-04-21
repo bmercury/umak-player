@@ -43,6 +43,9 @@ body{
 .card-panel{
     background-color: $gray-tr;
     border-radius: 3px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 .card-panel-round{
     border-radius: 50px;
@@ -54,10 +57,38 @@ body{
     text-align: center;
     color: $white;
     line-height: 40px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 .card-button-round{
     border-radius: 50%;
 }
 .card-button-high{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.button-playback{
+    color: $white;
+    font-size: 16px;
+    line-height: 40px;
+    margin: 0px 5px;
+}
+
+.button-playback-active{
+    color: #db8d60;
+}
+
+#song_player{
+    i{
+        cursor: pointer;
+        transition-duration: 0.1s;
+
+        &:active{
+            transform: scale(0.8);
+        }
+    }
 }
