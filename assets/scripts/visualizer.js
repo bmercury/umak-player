@@ -1,18 +1,35 @@
-var context = null;
+var visualizer_context=null;
+
+function stopVisualizer(){
+    if(visualizer_context){
+        visualizer_context.suspend();
+    }
+    var canvas = document.getElementById("visualizer-canvas");
+    $(canvas).addClass('hidden');
+}
+
+function resumeVisualizer(){
+    if(visualizer_context===null){
+        visualizer_context = new AudioContext();
+    }else{
+        visualizer_context.resume();
+    }
+    var canvas = document.getElementById("visualizer-canvas");
+    $(canvas).removeClass('hidden');
+}
 
 function initVisualizer(audioFile) {
-    var audio = audioFile
-    audio.load();
+    console.log("start init");
+    var audio = audioFile;
     audio.play();
-    context = new AudioContext();
-    var src = context.createMediaElementSource(audio);
-    var analyser = context.createAnalyser();
+    var src = visualizer_context.createMediaElementSource(audio);
+    var analyser = visualizer_context.createAnalyser();
     var canvas = document.getElementById("visualizer-canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     var ctx = canvas.getContext("2d");
     src.connect(analyser);
-    analyser.connect(context.destination);
+    analyser.connect(visualizer_context.destination);
     analyser.fftSize = 256;
     var bufferLength = analyser.frequencyBinCount;
     var dataArray = new Uint8Array(bufferLength);

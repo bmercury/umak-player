@@ -1,0 +1,32 @@
+.view_hidden{display: none !important;}
+
+#view_main{
+    display: grid;
+    grid-template-rows: 300px auto 60px;
+    grid-row-gap: 20px;
+}
+
+.view{
+    height: 100%;
+}
+
+#view_about{
+    position: relative;
+    p{
+        color: gray;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 0px;
+        margin: 0px;
+        text-align: justify;
+        width: 80%;
+
+        a{
+            color: gray;
+            font-weight: bold;
+            
+        }
+    }
+}

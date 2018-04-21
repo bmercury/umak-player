@@ -1,8 +1,9 @@
 TODO:
-* Add adding youtube videos possible
 * Add time slider for songs
-* Can remove songs
-
+* Normal player affects youtube player
 
 FUTURE STUFF:
 * Add more language support - Cyrilic etc.
+* Better visualization
+* Centered or custom prompt box
+* Better random choice

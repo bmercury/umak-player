@@ -12,33 +12,31 @@
 
     <div class="navbar-container">
         <div class="navbar-grid">
-            <a href="song_manager.html">
-                <div class="navbar-link">
-                    <i class="fa fa-bars navbar-link-icon"></i>
-                    <div class="navbar-tooltip">
-                        <span class="navbar-tooltip-text">song manager</span>
-                    </div>
+            <div id="navbar_0" class="navbar-link link-active" onclick="view_manager.switchView(0)">
+                <i class="fa fa-bars navbar-link-icon"></i>
+                <div class="navbar-tooltip">
+                    <span class="navbar-tooltip-text">song manager</span>
                 </div>
-            </a>
-            <div class="navbar-link">
+            </div>
+            <div id="navbar_1" class="navbar-link" onclick="view_manager.switchView(1)">
                 <i class="fa fa-play-circle navbar-link-icon"></i>
                 <div class="navbar-tooltip">
                     <span class="navbar-tooltip-text">playlists</span>
                 </div>
             </div>
-            <div class="navbar-link">
+            <div id="navbar_2" class="navbar-link" onclick="view_manager.switchView(2)">
                 <i class="fa fa-chart-bar navbar-link-icon"></i>
                 <div class="navbar-tooltip">
                     <span class="navbar-tooltip-text">eq</span>
                 </div>
             </div>
-            <div class="navbar-link">
+            <div id="navbar_3" class="navbar-link" onclick="view_manager.switchView(3)">
                 <i class="fa fa-wrench navbar-link-icon"></i>
                 <div class="navbar-tooltip">
                     <span class="navbar-tooltip-text">settings</span>
                 </div>
             </div>
-            <div class="navbar-link">
+            <div id="navbar_4" class="navbar-link" onclick="view_manager.switchView(4)">
                 <i class="fa fa-question navbar-link-icon"></i>
                 <div class="navbar-tooltip">
                     <span class="navbar-tooltip-text">about</span>
@@ -51,7 +49,8 @@
         <div class="panel song-manager-grid">
             <div class="top-grid">
                 <input style="display: none;" id="song_upload" type="file" multiple>
-                <label for="song_upload" class="card-button card-button-high"><i class="fa fa-plus"></i></label>
+                <label for="song_upload" class="card-button card-button-high"><i class="fa fa-file-medical"></i></label>
+                <label onclick="song_manager.startOnlineFileUpload()" class="card-button card-button-high"><i class="fa fa-globe"></i></label>
                 <div id="song_player" class="card-panel">
                     <i id="button_random" onclick="song_player.toggleRandom()" class="fa fa-random button-playback"></i>
                     <i id="button_previous" onclick="song_player.previousSong()" class="fa fa-step-backward button-playback"></i>
@@ -68,9 +67,24 @@
                 </ul>
             </div>
         </div>
-        <div class="panel">
-            <div class="visualizer-box">
-                <canvas id="visualizer-canvas"></canvas>
+        <div class="panel right-panel-grid">
+            <div id="view_main" class="view">
+                <div class="visualizer-box">
+                    <div id="visualizer-iframe" class="hidden"></div>
+                    <canvas id="visualizer-canvas"></canvas>
+                </div>
+                <div class="song-details">
+                    <span class="song_tag">Album: <span id="song_album"></span></span>
+                    <span class="song_tag">Track: <span id="song_track"></span></span>
+                    <span class="song_tag">Title: <span id="song_title"></span></span>
+                </div>
+                <div class="song-actions">
+                    <div onclick="song_manager.deleteCurrent()" class="song-action">Delete current</div>
+                    <div onclick="song_manager.deleteAll()" class="song-action">Delete all</div>
+                </div>
+            </div>
+            <div id="view_about" class="view card view_hidden">
+                <p><span style="font-size: 20px;">About Umak music player</span><br><br>Umak music player is an experimental software intended for easy music playback. Any contribution is welcomed.<br><br>Umak music player is being developed by <a target="_blank" href="https://github.com/Reinards">Reinards Jānis Saulītis</a>.</p>
             </div>
         </div>
     </div>
@@ -80,6 +94,7 @@
     <script src="../assets/other/jsmediatags.min.js"></script>
     <script src="../assets/other/simplebar/simplebar.js"></script>
     <script src="../assets/scripts/visualizer.js"></script>
+    <script src="../assets/scripts/view_manager.js"></script>
     <script src="../assets/scripts/song_manager.js"></script>
     <script src="../assets/scripts/song_player.js"></script>
     <script src="../assets/scripts/main.js"></script>

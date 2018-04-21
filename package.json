@@ -30,5 +30,9 @@
         "deb"
       ]
     }
+  },
+  "dependencies": {
+    "electron-prompt": "^0.5.0",
+    "yt-player": "^2.6.0"
   }
 }
