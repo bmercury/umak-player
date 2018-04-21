@@ -63,7 +63,7 @@
 
     SongPlayer.prototype.playSong = function(src, id){
 
-        // console.log(this.current_song_audio);
+        console.log(this.current_song_audio);
 
         
         if(id === this.current_song_id || id === undefined){
@@ -79,11 +79,13 @@
                 window.song_player.nextSong();
             });
             this.current_song_audio.src = src;
-            this.current_song_audio.play();
+            // this.current_song_audio.play();
             this.play_button.hide();
             this.pause_button.show();
     
             this.current_song_id = id;
+
+            initVisualizer(this.current_song_audio);
     
             if(document.querySelector(".song_selected")!==null){
                 var el = $(".song_selected");

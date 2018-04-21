@@ -50,6 +50,7 @@
     <div class="main-container">
         <div class="panel song-manager-grid">
             <div class="top-grid">
+                <input style="display: none;" id="song_upload" type="file" multiple>
                 <label for="song_upload" class="card-button card-button-high"><i class="fa fa-plus"></i></label>
                 <div id="song_player" class="card-panel">
                     <i id="button_random" onclick="song_player.toggleRandom()" class="fa fa-random button-playback"></i>
@@ -68,7 +69,9 @@
             </div>
         </div>
         <div class="panel">
-            <input style="display: none;" id="song_upload" type="file" multiple>
+            <div class="visualizer-box">
+                <canvas id="visualizer-canvas"></canvas>
+            </div>
         </div>
     </div>
     
@@ -76,6 +79,7 @@
     <script src="../assets/other/jquery-3.3.1.min.js"></script>
     <script src="../assets/other/jsmediatags.min.js"></script>
     <script src="../assets/other/simplebar/simplebar.js"></script>
+    <script src="../assets/scripts/visualizer.js"></script>
     <script src="../assets/scripts/song_manager.js"></script>
     <script src="../assets/scripts/song_player.js"></script>
     <script src="../assets/scripts/main.js"></script>
