@@ -1,3 +1,6 @@
+<img align="center" width="400" height="160,376" src="https://user-images.githubusercontent.com/34600369/40011289-3d958f58-579f-11e8-9e5e-62e9729ff3ed.png">
+
+
 # umak-player
 A simple music player, intended for personal usage.
 
