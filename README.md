@@ -12,3 +12,7 @@ Planned features:
 *Songs can be added from disk or from an online resource<br>
 *Songs can be added to playlists<br>
 *A basic EQ is available
+<br>
+<br>
+Special thanks to:<br>
+@nunojesus for aiding us with the logo design
